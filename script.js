@@ -27,6 +27,22 @@ document.addEventListener("mousemove",()=>{
     }
 })
 
+document.addEventListener("touchmove",()=>{
+    var dragger = document.querySelector("#dragme");
+    var target = document.querySelector("#target");
+    var video1 = document.querySelector(".video1");
+
+    var p1 = dragger.getBoundingClientRect();
+    var p2 = target.getBoundingClientRect();
+
+    if(p1.right < p2.left) {
+        video1.style.opacity = 1;
+    }
+    else{
+        video1.style.opacity = 0;
+
+    }
+})
 
 
 
